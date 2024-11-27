@@ -30,28 +30,27 @@ export async function postSubscribers(subdata) {
 }
 
 export async function getSubById(id) {
-  const url = `https://sddebowanoanfoafukif.supabase.co/rest/v1/subscriptions?id=eq.${id}`;
-
-  const response = await fetch(url, {
+  let response = await fetch(`${url}?id=eq.${id}`, {
     method: "GET",
     headers: headersList,
   });
-
   let data = await response.json();
-  console.log("Hentet subscriber data", data);
-  return data;
+  return data[0];
 }
 
-export async function patchSubscriber(subscriberData) {
-  const { id, name, email } = subscriberData; // Destrukturering af data for nem adgang
-  const url = `https://sddebowanoanfoafukif.supabase.co/rest/v1/subscriptions?id=eq.${id}`; // Antaget API endpoint for opdatering af abonnent
-
-  let response = await fetch(url, {
+export async function patchSubscriber(id, subData) {
+  let response = await fetch(`${url}?id=eq.${id}`, {
     method: "PATCH",
     headers: headersList,
-    body: JSON.stringify({ name, email }), // Send de opdaterede data
+    body: JSON.stringify(subData),
   });
+  return await response.json();
+}
 
-  let data = await response.json();
-  return data;
+export async function deleteSubscriber(id) {
+  let response = await fetch(`${url}?id=eq.${id}`, {
+    method: "DELETE",
+    headers: headersList,
+  });
+  return await response.json();
 }

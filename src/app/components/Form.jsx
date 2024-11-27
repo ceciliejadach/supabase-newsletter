@@ -14,24 +14,24 @@ async function Form() {
   }
   return (
     // action på form modtager det der hedder formData
-    <form action={send} className="grid place-content-center h-[70vh]">
+    <form action={send} className="max-w-md mx-auto p-4 bg-white shadow-md rounded mt-10">
       <h1 className="text-4xl mb-5">
         <strong>Newsletter</strong>
       </h1>
-      <div className="grid gap-3 bg-blue-950 p-3 w-[15rem] rounded-md">
-        <div className="grid gap-1">
-          <label htmlFor="name">
+      <div className="">
+        <div className="mb-4">
+          <label htmlFor="name" className="block text-gray-700 font-bold mb-2">
             <strong>Name</strong>
           </label>
-          <input className="rounded-sm h-9" type="text" id="name" name="name" />
+          <input className="w-full px-3 py-2 border border-gray-300 rounded" type="text" id="name" name="name" />
         </div>
-        <div className="grid gap-1">
-          <label htmlFor="email">
+        <div className="mb-4">
+          <label htmlFor="email" className="block text-gray-700 font-bold mb-2">
             <strong>E-mail</strong>
           </label>
-          <input className="rounded-sm h-9" type="email" id="email" name="email" />
+          <input className="w-full px-3 py-2 border border-gray-300 rounded" type="email" id="email" name="email" />
         </div>
-        <button className="bg-blue-800 py-2 rounded-sm" type="submit">
+        <button className="w-full bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700" type="submit">
           Subscribe
         </button>
       </div>

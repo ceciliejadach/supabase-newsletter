@@ -1,21 +1,25 @@
 import { getSubscribers } from "@/lib/supabase";
 import Form from "@/app/components/Form";
 import Link from "next/link";
+import { IoIosArrowForward } from "react-icons/io";
 
 //når man skriver async, så ved man, at man er på serveren
 export default async function Home() {
   const subscribers = await getSubscribers();
 
   return (
-    <div>
+    <div className="max-w-screen-xl mx-auto">
       <Form />
-      <ul className="flex flex-wrap gap-4">
+      <ul className="flex flex-wrap gap-4 mt-10">
         {subscribers.map((subscribe) => (
-          <Link href={`/update/${subscribe.id}`}>
-            <li className="bg-white text-slate-800 h-20 p-2 rounded-sm" key={subscribe.id}>
-              {subscribe.name} - {subscribe.email}
-            </li>
-          </Link>
+          <li className="p-4 bg-white shadow-md rounded flex" key={subscribe.id}>
+            <Link href={`/update/${subscribe.id}`} className="flex items-center gap-5">
+              <p>
+                {subscribe.name} - {subscribe.email}
+              </p>
+              <IoIosArrowForward />
+            </Link>
+          </li>
         ))}
       </ul>
     </div>
