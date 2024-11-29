@@ -1,7 +1,7 @@
 import { getSubscribers } from "@/lib/supabase";
 import Form from "@/app/components/Form";
 import Link from "next/link";
-import { IoIosArrowForward } from "react-icons/io";
+// import { IoIosArrowForward } from "react-icons/io";
 
 //når man skriver async, så ved man, at man er på serveren
 export default async function Home() {
@@ -17,7 +17,7 @@ export default async function Home() {
               <p>
                 {subscribe.name} - {subscribe.email}
               </p>
-              <IoIosArrowForward />
+              {/* <IoIosArrowForward /> */}
             </Link>
           </li>
         ))}

@@ -5,8 +5,7 @@ import SubmitButton from "./SubmitButton";
 import { useActionState } from "react";
 
 function Form() {
-  // const initialState =
-  const [state, action] = useActionState(send);
+  const [state, action] = useActionState(send, undefined);
 
   return (
     // action på form modtager det der hedder formData
