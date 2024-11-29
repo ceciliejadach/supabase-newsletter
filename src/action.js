@@ -2,7 +2,7 @@
 
 import { postSubscribers } from "@/lib/supabase";
 import { revalidatePath } from "next/cache";
-import { wait } from "@/app/utils";
+// import { wait } from "@/app/utils";
 
 export async function send(prev, formData) {
   const data = {
@@ -25,7 +25,7 @@ export async function send(prev, formData) {
   await postSubscribers(data); //kører funktionen der hedder postSubscribers
 
   // await new Promise((resolve) => setTimeout(resolve, 1000));
-  await wait(1000);
+  // await wait(1000);
 
-  revalidatePath("/newsletter");
+  revalidatePath("/");
 }

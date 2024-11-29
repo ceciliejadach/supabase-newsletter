@@ -6,9 +6,7 @@ import { useActionState } from "react";
 
 function Form() {
   // const initialState =
-  const [state, action, isPending] = useActionState(send);
-
-  console.log(state);
+  const [state, action] = useActionState(send);
 
   return (
     // action på form modtager det der hedder formData
