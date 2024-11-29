@@ -8,10 +8,7 @@ const headersList = {
 };
 
 export async function getSubscribers() {
-  let response = await fetch(url, {
-    method: "GET",
-    headers: headersList,
-  });
+  let response = await fetch("https://sddebowanoanfoafukif.supabase.co/rest/v1/subscriptions");
 
   let data = await response.json();
   return data;
