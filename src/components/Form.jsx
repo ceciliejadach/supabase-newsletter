@@ -13,20 +13,20 @@ function Form() {
       <h1 className="text-4xl mb-5">
         <strong>Newsletter</strong>
       </h1>
-      <div className="">
+      <div>
         <div className="mb-4">
           <label htmlFor="name" className="block text-gray-700 font-bold mb-2">
             <strong>Name</strong>
           </label>
           <input className="w-full px-3 py-2 border border-gray-300 rounded" type="text" id="name" name="name" required />
-          <p>{state?.errors.name}</p>
+          {/* <p>{state?.errors.name}</p> */}
         </div>
         <div className="mb-4">
           <label htmlFor="email" className="block text-gray-700 font-bold mb-2">
             <strong>E-mail</strong>
           </label>
           <input className="w-full px-3 py-2 border border-gray-300 rounded" type="email" id="email" name="email" required />
-          <p>{state?.errors.email}</p>
+          {/* <p>{state?.errors.email}</p> */}
         </div>
         <SubmitButton />
       </div>

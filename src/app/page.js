@@ -1,5 +1,5 @@
 import { getSubscribers } from "@/lib/supabase";
-import Form from "@/app/components/Form";
+import Form from "@/components/Form";
 import Link from "next/link";
 // import { IoIosArrowForward } from "react-icons/io";
 
