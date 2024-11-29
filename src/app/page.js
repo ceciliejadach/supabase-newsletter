@@ -12,7 +12,7 @@ export default async function Home() {
       <Form />
       <ul className="flex flex-wrap gap-4 mt-10">
         {subscribers.map((subscribe) => (
-          <li className="p-4 bg-white shadow-md rounded flex" key={subscribe.id}>
+          <li className="p-4 bg-white shadow-md rounded flex data-[updated='true']:outline-green-600" key={subscribe.id}>
             <Link href={`/update/${subscribe.id}`} className="flex items-center gap-5">
               <p>
                 {subscribe.name} - {subscribe.email}

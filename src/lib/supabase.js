@@ -35,7 +35,8 @@ export async function getSubById(id) {
     headers: headersList,
   });
   let data = await response.json();
-  return data[0];
+  return data;
+  // return data[0];//returnerer det første objekt i arrayet - gør at man kan se name og email i inputfelter
 }
 
 export async function patchSubscriber(id, subData) {
