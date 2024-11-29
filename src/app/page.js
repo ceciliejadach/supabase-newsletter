@@ -1,11 +1,11 @@
-// import { getSubscribers } from "@/lib/supabase";
+import { getSubscribers } from "@/lib/supabase";
 import Form from "@/components/Form";
 import Link from "next/link";
 // import { IoIosArrowForward } from "react-icons/io";
 
 //når man skriver async, så ved man, at man er på serveren
 export default async function Home() {
-  // const subscribers = await getSubscribers();
+  const subscribers = await getSubscribers();
 
   return (
     <div className="max-w-screen-xl mx-auto">
